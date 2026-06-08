@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: self-healing-rag-api
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false   # set this manually in Render dashboard
+    healthCheckPath: /health

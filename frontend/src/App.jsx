@@ -4,7 +4,7 @@ import PipelineTrace from "./components/PipelineTrace";
 import IngestPanel from "./components/IngestPanel";
 import "./index.css";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "https://jahanvi2005-self-healingrag.hf.space";
 
 export default function App() {
   const [result, setResult]   = useState(null);
